@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "easymde/dist/easymde.min.css";
+import { Toaster } from "@/components/ui/toaster";
 
 const workSans = localFont({
   src: [
@@ -55,8 +56,8 @@ const workSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Next Directory",
-  description: "Next app Directory",
+  title: "YC Directory",
+  description: "Pitch, Vote and Grow",
 };
 
 export default function RootLayout({
@@ -68,6 +69,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={workSans.variable}>
         {children}
+        <Toaster />
       </body>
     </html>
   );

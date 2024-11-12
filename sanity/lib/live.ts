@@ -1,7 +1,6 @@
-import "server-only"
+import "server-only";
 
-import { defineLive } from "next-sanity"
+import { defineLive } from "next-sanity";
+import { client } from "@/sanity/lib/client";
 
-import { client } from "@/sanity/lib/client"
-
-export const { sanityFetch, SanityLive } = defineLive({ client })
+export const { sanityFetch, SanityLive } = defineLive({ client });
